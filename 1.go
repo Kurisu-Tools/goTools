@@ -1,5 +1,7 @@
 package go_Tools
 
+import "log"
+
 func InStringArray(arr *[]string, str string) bool {
 	for _, value := range *arr {
 		if value == str {
@@ -16,4 +18,8 @@ func InIntArray(arr *[]int, str int) bool {
 		}
 	}
 	return false
+}
+
+func LogDebugInfo(info string) {
+	log.Printf("DEBUG:\x1b[35m %s  \x1b[0m", info)
 }
